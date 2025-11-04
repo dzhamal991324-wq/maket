@@ -78,6 +78,7 @@ header{
 .service-nav{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     min-width: 200px;
     justify-content: space-between;
     margin-left: 34px;
@@ -179,6 +180,8 @@ header{
     padding-top: 35px;
     padding-bottom: 43px;
 }
+
+
 
 .side-button{
     background-color: #ffffff;
@@ -403,7 +406,7 @@ a{
 .repair-table th {
     font-family: TT Lakes;
     font-weight: 400;
-    background-color: #f8f9fa;
+    background-color: #F8F8F8;
     padding-bottom: 15px;
     text-align: left;
     padding-left: 24px;
@@ -426,7 +429,7 @@ a{
 }
 
 .repair-table tr:hover {
-    background-color: #f8f9fa;
+    background-color: #F8F8F8;
 }
 
 tbody{
@@ -465,7 +468,7 @@ tbody{
     align-items: center;
     gap: 9px;
     border: none;
-    background-color:#f8f9fa ;
+    background-color:#F8F8F8 ;
     background-repeat: no-repeat;
 }
 
@@ -489,7 +492,6 @@ tbody{
 
 .footer-center{
    margin-left: 31px;
-   color: #7E7E82;
    font-family: TT Lakes;
    font-weight: 500;
    font-size: 14px;
@@ -497,8 +499,13 @@ tbody{
    letter-spacing: 0px;
 }
 
+.footer-link{
+    color: #7E7E82;
+}
+
 .footer-right{
    margin-left: 31px;
+   text-align: end;
    color: #7E7E82;
    font-family: TT Lakes;
    font-weight: 500;
@@ -508,13 +515,63 @@ tbody{
 }
 
 @media(max-width:1440px){
+
+   
+    .header-bottom{
+        margin-left:24px ;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+        width: 100%;
+        gap: 9px;
+        margin-left: 24px;
+    }
+
+    .grid-element{
+        margin: 0;
+        margin-bottom: 11px;
+        width: 224px;
+    }
+
     .menu-left{
         display: none;
+
     }
 
     .sidebar{
         display: block;
         width: 100%;
+    }
+    
+    .grid-service{
+        width: 224px;
+    }
+
+    .grid-new{
+        display: none;
+    }
+
+    .container-service{
+        display: flex;
+        gap: 24px;
+    }
+
+    .grid-btn{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    border: none;
+    width: 40px;
+    height: 40px;
+    top: 104px;
+    left: 168px;
+    }
+
+    .footer-right{
+        text-align: end;
     }
 }
 
@@ -528,7 +585,7 @@ tbody{
     }
     
    .bottom-section, .header{
-    background: #f5f5f5;
+    background: #F8F8F8;
    }
 
     .text{
@@ -577,6 +634,7 @@ tbody{
         width: 776px;
         height: 40px;
         margin-left: 24px;
+        background-color: #F8F8F8;
     }
     
     .header-tablets{
@@ -595,14 +653,14 @@ tbody{
     }
 
     .nav-b, .read{
-        background: #f8f8f8; 
+        background: #F8F8F8; 
         border: none;
         justify-content: center;
         align-items: center;
       
     }
     
-     Стили только для первой кнопки 
+     /*Стили только для первой кнопки*/ 
     .nav-b:first-child {
         background: #fff;
         border: 2px solid #B8FFEC;   
@@ -623,6 +681,10 @@ tbody{
      flex:1;
      padding-right: 24px;
     } 
+
+    
+
+
 } 
   
 /* @media(max-width:768px){
