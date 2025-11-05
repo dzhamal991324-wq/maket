@@ -472,6 +472,11 @@ tbody{
     background-repeat: no-repeat;
 }
 
+body{
+    margin: 0;
+   }
+   
+
 .main-footer{
     display: flex;
     margin-top: 50px;
@@ -516,6 +521,9 @@ tbody{
 
 @media(max-width:1440px){
 
+   body{
+    margin: 0;
+   }
    
     .header-bottom{
         margin-left:24px ;
@@ -687,7 +695,7 @@ tbody{
 
 } 
   
-/* @media(max-width:768px){
+ @media(max-width:768px){
     .menu-left{
         display: none;
     }
@@ -788,4 +796,4 @@ tbody{
     line-height: 14px;
     letter-spacing: -0.2px;
     }
-} */
+} 
