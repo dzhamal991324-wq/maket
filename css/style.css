@@ -3,6 +3,7 @@ html, body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 * {
@@ -17,7 +18,6 @@ body{
         max-width: 1440px;
         margin: 0 auto;
         padding: 0;
-        width: 540px;
     }
 
 .text-mobaile{
@@ -365,38 +365,49 @@ a{
     margin-left: 32px;
 }
 
-.container-service{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.container-service {
+    display: flex; /* Убираем grid-template-columns */
+    gap: 24px;
+    overflow-x: auto; /* Добавляем горизонтальный скролл */
+    padding: 16px 0;
+    scrollbar-width: none;
 }
 
-.grid-service{
+.container-service::-webkit-scrollbar {
+    display: none;
+}
+
+.grid-service {
     display: flex;
-    position: relative;
+    flex-direction: column; /* Вертикальное расположение */
+    justify-content: space-between; /* Текст вверху, кнопка внизу */
     border: 1px solid #EAEAEA;
     background-color: #FFFFFF;
     border-radius: 6px;
     width: 240px;
     height: 160px;
+    padding: 16px; /* Добавляем внутренние отступы */
+    flex-shrink: 0; /* Важно: элементы не сжимаются */
 }
 
-.text-grid{
-    position: absolute;
+.text-grid {
+    position: static; 
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    left: 16px; 
+    margin: 0; /* Убираем left: 16px */
+    align-self: flex-start; /* Текст слева */
 }
 
-.grid-btn{
-    position: absolute;
+.grid-btn {
+    position: static; 
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     border: none;
     width: 40px;
     height: 40px;
-    top: 104px;
-    left: 184px;
+    align-self: flex-end; /* Кнопка справа */
+    margin-top: auto; /* Кнопка прижимается к низу */
 }
 
 .info-btn{
@@ -557,7 +568,7 @@ body{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding: 0;
-        width: 100%;
+        width: 768px;
         gap: 9px;
         margin-left: 24px;
     }
@@ -579,7 +590,7 @@ body{
     }
     
     .grid-service{
-        width: 224px;
+        width: 240px;
     }
 
     .grid-new{
@@ -592,15 +603,17 @@ body{
     }
 
     .grid-btn{
-    position: absolute;
+    position: static; 
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     border: none;
     width: 40px;
     height: 40px;
-    top: 104px;
-    left: 168px;
+    padding-bottom: 40px;
+    align-self: flex-end; /* Кнопка справа */
+    margin-top: auto; /* Кнопка прижимается к низу */
     }
+    
 
     .footer-right{
         text-align: end;
@@ -721,7 +734,55 @@ body{
   
  @media(max-width:767px){
 
+     .button-scrol {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .desktop-nav {
+        width: auto;
+        height: 42px;
+        overflow-x: auto; /* Горизонтальный скролл */
+        overflow-y: hidden; /* Отключаем вертикальный скролл */
+        display: flex; 
+        flex-direction: row; /* Элементы в строку */
+        flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
+        white-space: nowrap; /* Текст не переносится */
+    }
+    
+   .grid-container{
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        gap: 16px;
+        padding: 16px;
+        scrollbar-width: none; /* Скрываем скроллбар */
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+   }
    
+
+   .container-service{
+    overflow-x: auto;
+    overflow-y: none;
+    scrollbar-width: none;
+    width: auto;
+    flex-direction: row;
+   }
+
+   .grid-element{
+         width: 404px;
+        height: 42px;
+        overflow-x: auto;
+    }
+
+   .grid-element {
+        flex: 0 0 auto; /* Элементы не сжимаются */
+        width: 240px; /* Фиксированная ширина элементов */
+        height: 72px;
+        margin: 0; /* Убираем старые отступы */
+    }
     .read{
         margin-left: 16px;
     }
@@ -737,10 +798,7 @@ body{
         display: none;
     }
 
-    .desktop-nav{
-        overflow-x: auto;
-        height: 42px;
-    }
+    
 
     .header-tablets{
      width: 100%;
