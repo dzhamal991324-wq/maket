@@ -10,6 +10,10 @@ html, body {
     box-sizing: border-box;
 }
 
+.mobile-price-cards {
+    display: none;
+}
+
 body{
     background: #F8F8F8;
 }
@@ -733,7 +737,55 @@ body{
 } 
   
  @media(max-width:767px){
+    
+    .repair-table{
+        display: none;
+    }
 
+    .mobile-price-cards{
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 16px;
+        scrollbar-width: none;
+    }
+
+     .price-card {
+        flex: 0 0 auto;
+        width: 260px;
+        height: 200px;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Для позиционирования кнопки */
+    }
+    
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+    
+    .card-label {
+        color: #7E7E82;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .card-value {
+        color: #1B1C21;
+        font-size: 14px;
+        line-height: 18px;
+        word-break: break-word;
+    }
+    
+    .order-btn{
+        margin-left: 100px;
+    }
+    
      .button-scrol {
         width: 100%;
         overflow: hidden;
@@ -759,7 +811,7 @@ body{
         padding: 16px;
         scrollbar-width: none; /* Скрываем скроллбар */
         -ms-overflow-style: none;
-        -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+        -webkit-overflow-scrolling: touch; 
    }
    
 
@@ -864,6 +916,25 @@ body{
      align-items: center;
      gap: 16px;
     }
+
+    .main-footer{
+        height: 129px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-left{
+        text-align: center;`
+        
+    }
+
+    .footer-right{
+        width: 312px;
+        text-align: center;
+    }
+
 }
 @media(max-width:467px){
     .nav-mob:first-child{
