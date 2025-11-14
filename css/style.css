@@ -898,6 +898,7 @@ body{
         justify-content: end;
         flex:1;
         gap: 16px;
+        padding-right: 16px;
     }
 
     .text-mobaile{
