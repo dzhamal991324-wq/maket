@@ -209,6 +209,7 @@ header{
 
 .side-button{
     background-color: #ffffff;
+    transition: background-color 0.5s ease;
     border: none;
     text-align: left;
     padding-left: 24px;
@@ -216,6 +217,10 @@ header{
     line-height: 24px;
     letter-spacing: -0.2px;
 }    
+
+.side-button:hover{
+    background-color: #a39191;
+}
 /* Нижняя часть сайдбар (Информация)*/
 
 .info{
@@ -483,7 +488,6 @@ tbody{
 }
 
 .text-new{
-    margin-left: 32px;
     margin-top: 32px;
     width: 421px;
     height: 60px;
@@ -507,6 +511,8 @@ tbody{
     border: none;
     background-color:#F8F8F8 ;
     background-repeat: no-repeat;
+    margin: -32px;
+    margin-top: 2px;
 }
 
 body{
@@ -520,6 +526,7 @@ body{
     margin-bottom: 20px;
     align-items: flex-start;
     justify-content: space-between;
+    margin-left: -32px;
 }
 
 .footer-left{
@@ -566,6 +573,10 @@ body{
    
     .header-bottom{
         margin-left:24px ;
+    }
+
+    .btn-new{
+        margin-top: 16px;
     }
 
     .grid-container{
@@ -926,7 +937,7 @@ body{
 
 
     .footer-left{
-        text-align: center;`
+        text-align: center;
         
     }
 
